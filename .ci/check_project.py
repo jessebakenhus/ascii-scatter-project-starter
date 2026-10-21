@@ -95,7 +95,7 @@ if tag_check.returncode == 0:
     authors = sorted({line.strip() for line in history.stdout.splitlines() if line.strip()})
     add_result(
         "commits from at least two contributors",
-        len(authors) >= 2,
+        len(authors) >= 3,
         f"Found {len(authors)} unique commit email(s)",
     )
 else:
